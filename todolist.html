@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' href='stylesheets/todostyles.css'
+        href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href='stylesheets/fontello.css'>
+    
+</head>
+
+<body>
+    <div class = 'pagecontainer'>
+        <div class= 'page'>
+            <div class = 'titlecontainer'>
+                <div class = title>
+                    <h1>Gyoza</h1>
+                </div>
+
+                <div class= 'subtitle'>
+                    <h2>a simple todo list</h2>
+                </div>
+            </div> 
+
+            <div class = 'todolistcontainer'>
+                <div class = 'todolist'>
+                    <!-- Clicking the button goes to the address and executes function -->
+                    <div class = 'addtodosbar'>
+                        <div class='maincheckboxcontainer'>
+                            <input type="checkbox" onclick='handlers.toggleAll()' id='checkbox_main'/>
+                            <label for='checkbox_main' class= checkboxicon id='checkboxicon'>    
+                                <i class=icon-down-open></i>
+                            </label>
+                        </div>    
+                         <input id='addTodosTextInput' type='text' placeholder='What do you need to do today?'>   
+                    </div>
+
+                    <h2></h2>
+
+                    <ul></ul>
+                    <div class = 'menucontainer' id = 'menucontainer'>     
+                        <div id = 'menus'>
+                            <div class = 'countercontainer'>
+                            <span id = 'counter'></span>
+                            </div>
+
+                            <div class = 'displaymodescontainer'>
+                                <input type='radio' onclick='handlers.setDisplayModeAll()' class = 'displaymodes' id = 'displayAll' name='radio'><label for='displayAll'>All</label>
+                                <input type='radio' onclick='handlers.setDisplayModeActive()' class = 'displaymodes' id = 'displayActive' name='radio'><label for='displayActive'>Active</label>
+                                <input type='radio' onclick='handlers.setDisplayModeCompleted()' class='displaymodes' id = 'displayCompleted' name='radio'><label for='displayCompleted'>Completed</label>
+                            </div>    
+
+                            <button onclick='handlers.clearAllCompleted()' class = 'clearallcompleted' id = 'clearAll'>Clear All Completed</button>
+                        </div>        
+                    </div>
+                </div>    
+            </div>   
+        </div>
+    </div> 
+  <script src='scripts/todoScript.js'></script>
+</body>
+
+</html>
